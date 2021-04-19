@@ -8,4 +8,10 @@ class NameTestCase(unittest.TestCase):
         formatted_name = get_formatted_name('janis', 'joplin')
         self.assertEqual(formatted_name, 'Janis Joplin')
         """断言函数assertEqual（）判断是否相等"""
+
+
+    def test_first_middle_last_name(self):
+        formatted_name = get_formatted_name('wolfgang', 'mozart', 'amadeus')
+        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
+        
 unittest.main()
