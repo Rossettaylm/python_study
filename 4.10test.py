@@ -14,3 +14,4 @@ for new in news[-3:]:
 #通过切片复制列表
 numbers = news[:]
 print("\n" + str(numbers))
+
