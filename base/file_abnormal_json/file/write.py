@@ -1,4 +1,4 @@
-filename = 'test'
+filename = 'test.txt'
 # 注意！若test文件已经存在，write（）会先清空test内的数据
 with open(filename, 'w') as file_object:
     #'w'表示以可写模式打开文件，且只能写入字符串

@@ -1,9 +1,9 @@
-filename = 'test'
-with open('test') as file_object:   #表示路径为./test, with函数表示返回的open（）对象只在with代码块内可用
+filename = 'test.txt'
+with open('test.txt') as file_object:   #表示路径为./test, with函数表示返回的open（）对象只在with代码块内可用
     contents = file_object.read()
     print(contents.rstrip())
 
-file_path = '/home/rossetta/python_works/file_operation/test'
+file_path = '/home/rossetta/python_works/base/file_abnormal_json/file/test.txt'
 #用变量表示绝对路径
 with open(file_path) as file_object_abs:
     contents = file_object_abs.read()
