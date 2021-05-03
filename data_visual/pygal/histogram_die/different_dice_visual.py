@@ -1,5 +1,6 @@
-from die import Die
 import pygal
+
+from die import Die  # type: ignore
 
 # 创建一个Die6和Die10
 die_1 = Die(6)
