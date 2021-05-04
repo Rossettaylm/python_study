@@ -1,6 +1,3 @@
-# python_study
-从零开始学python
-
 [^ROSSETTA]
 
 # 标题
@@ -70,3 +67,21 @@ google.com
     - second[1]
     - second[2]
 
+# 区块嵌套
+> 最外层
+> > 第一层嵌套
+> > > 第二层嵌套
+
+# 区块中使用列表
+> 区块中使用列表
+> 1. 第一项
+> 2. 第二项
+> + 第一项
+> + 第二项
+> + 第三项
+
+# 列表中使用区块
+* first
+    > yangliaoming  
+    > queshi
+* second
