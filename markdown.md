@@ -1,4 +1,3 @@
-[^ROSSETTA]
 
 # 标题
 一级标题
@@ -43,6 +42,7 @@ google.com
 <u>带下划线文本</u>
 
 # 脚注  
+This is a footnote.[^ROSSETTA]
 [^ROSSETTA]: thenameofme~  
 
 # 无序列表
@@ -76,12 +76,61 @@ google.com
 > 区块中使用列表
 > 1. 第一项
 > 2. 第二项
-> + 第一项
-> + 第二项
+> * 第一项
+> * 第二项
 > + 第三项
+> - 第四项
 
 # 列表中使用区块
 * first
     > yangliaoming  
     > queshi
 * second
+
+# 代码表示
+1. 用反引号表示  
+
+`print()`  
+
+2. 用三个反引号表示, 指定一种语言（可选）
+``` python      
+    for value in range(1,11):      
+        print(value)
+```
+
+# 链接表示
+* [链接名称](链接地址)  
+[google](https://www.google.com)
+* <链接地址>  
+<https://www.google.com>
+
+### 高级链接 
+变量1为网址变量   
+[Google][1]  
+
+# 图片表示  
+![photo](a photo address)  
+![RUNOOB 图标](https://static.runoob.com/images/runoob-logo.png)   
+<img src="https://static.runoob.com/images/runoob-logo.png" width="50%">
+
+同高级链接，这个链接用2作为网址变量
+然后在文档的结尾为变量赋值 （网址）   
+[RUNOOB][2].   
+
+# 表格表示  
+用|来分隔不同的单元格， 用-----来分隔表头和其他行  
+| title1 | title2 |  
+| ------ | ------ |  
+| cell1  | cell2  |
+| cell11 | cell22 |
+
+| 左对齐 | 右对齐 | 居中对齐 | 
+| :----- | ------:| :------: |
+| cell | cell | cell |
+| cell | cell | cell |
+
+
+
+--------------
+[1]: https://www.google.com
+[2]: https://static.runoob.com/images/runoob-logo.png  
