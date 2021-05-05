@@ -42,7 +42,7 @@ google.com
 <u>带下划线文本</u>
 
 # 脚注  
-This is a footnote.[^ROSSETTA]
+This is a footnote.[^ROSSETTA]  
 [^ROSSETTA]: thenameofme~  
 
 # 无序列表
