@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 input_value = list(range(1, 6))
 squares = [1, 4, 9, 16, 25]
 plt.plot(input_value, squares, linewidth=5, c='pink')
