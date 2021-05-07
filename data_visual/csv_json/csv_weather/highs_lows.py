@@ -10,9 +10,9 @@ with open(filename) as f:
     # 阅读器对象返回下一行，即第一行
     header_row = next(reader)
 
-    ## enumerate()来获取header_row每个元素的索引和其值
-    #for index, column_header in enumerate(header_row):
-       #print(index, column_header)
+    # enumerate()来获取header_row每个元素的索引和其值
+    # for index, column_header in enumerate(header_row):
+    #print(index, column_header)
 
     dates, highs, lows = [], [], []
     # 阅读器对象将从第二行开始遍历
@@ -35,8 +35,8 @@ plt.plot(dates, highs, c='red')
 plt.plot(dates, lows, c='blue')
 
 # 填充最高温和最低温之间的区域，alpha表示透明度
-plt.fill_between(dates, highs, lows, 
-                facecolor='blue', alpha=0.1)
+plt.fill_between(dates, highs, lows,
+                 facecolor='blue', alpha=0.1)
 
 # 设置图形的格式
 plt.title("Daily high and low temperatures - 2014\nDeath Valley, CA", fontsize=24)
@@ -49,4 +49,3 @@ fig.autofmt_xdate()
 plt.tick_params(axis='both', which='major', labelsize=16)
 
 plt.show()
-

@@ -1,7 +1,7 @@
-from car import Car     # 从car.py引进Car类
-from car import ElectricCar # 从car.py引进ElectricCar类，其分类Battery不用
+from car import Car  # type: ignore
+from car import ElectricCar  # type: ignore 从car.py引进ElectricCar类，其分类Battery不用
 #from car import Car,ElectricCar
-#import car     #导入整个模块需要加前缀，如car.Car()
+# import car     #导入整个模块需要加前缀，如car.Car()
 
 my_new_car = Car('audi', 'a4', 2020)
 print(my_new_car.get_descriptive_name())
