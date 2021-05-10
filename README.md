@@ -2,15 +2,12 @@
 
 ---
 
-- **python_crash_course**  
-  [python crash course](/home/rossetta/python_works/python_crash_course)
+- **python_crash_course**
 
 ---
 
-- **python official tutorial**  
-  [tutorial](/home/rossetta/python_works/python_official)
+- **python official tutorial**
 
 ---
 
-- **the base of numpy**  
-  [numpy](/home/rossetta/python_works/numpy)
+- **the base of numpy**
