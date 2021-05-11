@@ -1,4 +1,5 @@
 from random import randint
+from typing import Sized
 
 count = 0
 while True:
@@ -15,4 +16,3 @@ while True:
     count += 1
 
 print("The count is " + str(count))
-
