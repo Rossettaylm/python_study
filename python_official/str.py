@@ -22,15 +22,23 @@ prefix = 'Py'
 print('\n' + prefix + 'thon')
 
 # (5) 字符串支持索引, 切片, 但不能直接复制赋值
-## +---+---+---+---+---+---+
-## | P | y | t | h | o | n |
-## +---+---+---+---+---+---+
-## 0   1   2   3   4   5   6
+# +---+---+---+---+---+---+
+# | P | y | t | h | o | n |
+# +---+---+---+---+---+---+
+# 0   1   2   3   4   5   6
 ## -6  -5  -4  -3  -2  -1
 word = 'Python'
 print('\n' + word[0], word[-1])
 print(word[0:2])  # included : excluded
 print(word[2:5])
-print(word[:2] + word[2:]) # word = word[:i] + word[i:]
+print(word[:2] + word[2:])  # word = word[:i] + word[i:]
 print('J' + word[1:])
 
+
+"""
+File: str.py
+Author: Rossetta
+Email: 2441197035ylm@gmail.com
+Github: https://github.com/Rossettaylm
+Description: kaishijequeshi zheshiwod
+"""
