@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-# -*- coding: UTF-8 -*-
-
 import numpy as np
 
 a = np.floor(10 * np.random.random((3, 4)))
@@ -23,3 +20,5 @@ print('\n')
 a.resize((2, 6))
 print(a)
 a = np.arange(17)
+
+print('hello')

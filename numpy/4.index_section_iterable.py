@@ -43,3 +43,4 @@ for row in b:
 print('\n')
 for element in b.flat:
     print(element)
+

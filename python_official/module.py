@@ -35,6 +35,4 @@ def fib2(n):   # return Fibonacci series up to n
 # 1 输入脚本的目录（当前目录）
 # 2 PYTHONPATH
 # 3 默认安装目录
-
-
 print(sys.path)

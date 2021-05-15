@@ -1,8 +1,9 @@
-#!/usr/bin/python3
-# -*- coding: UTF-8 -*-
+"""
+create array
+"""
+
 from matplotlib import pyplot as plt
-import sys
-import numpy as np 
+import numpy as np
 from numpy import pi
 
 a = np.arange(15).reshape(3, 5)
@@ -54,7 +55,8 @@ print(a)
 print(b)
 print(a.reshape(2, 2))
 
-# (5) 当arange与浮点参数一起使用时，由于有限的浮点精度，通常不可能预测所获得的元素的数量。出于这个原因，通常最好使用linspace函数来接收我们想要的元素数量的函数，而不是步长（step）
+# (5) 当arange与浮点参数一起使用时，由于有限的浮点精度，通常不可能预测所获得的元素的数量。
+# 出于这个原因，通常最好使用linspace函数来接收我们想要的元素数量的函数，而不是步长（step）
 a = np.linspace(0, 2, 9)  # 9 numbers from 0 to 2, included 2
 x = np.linspace(0, 2*pi, 100)
 f = np.sin(x)
