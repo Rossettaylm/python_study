@@ -7,7 +7,7 @@ import requests
 url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
 r = requests.get(url)
 
-## 状态码200表示请求成功
+# 状态码200表示请求成功
 #print("Status code:", r.status_code)
 
 # 将API响应存储在一个变量中
@@ -20,10 +20,10 @@ names, plot_dicts = [], []
 for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
     plot_dict = {
-            'value': repo_dict['stargazers_count'],
-            'label': repo_dict['description'],
-            'xlink': repo_dict['html_url'],
-            }
+        'value': repo_dict['stargazers_count'],
+        'label': repo_dict['description'],
+        'xlink': repo_dict['html_url'],
+    }
     plot_dicts.append(plot_dict)
 
 print(plot_dicts)
