@@ -24,7 +24,7 @@ def f(x, y):
     return 10 * x + y
 
 
-b = np.fromfunction(f, (5, 4), dtype=int) # 按函数f生成shape=（5,4）的数组
+b = np.fromfunction(f, (5, 4), dtype=int)  # 按函数f生成shape=（5,4）的数组
 print('\nb = ', b)
 print(b[2, 3])
 print(b[0:5, 1])  # 第0-4行，1列
@@ -43,4 +43,3 @@ for row in b:
 print('\n')
 for element in b.flat:
     print(element)
-

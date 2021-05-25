@@ -1,6 +1,3 @@
-"""
-math module
-"""
 import math
 import random
 
@@ -31,5 +28,5 @@ print(random.choice([1, -1, 2, -2]))
 # default: k=1, 返回的个数
 print(random.choices([1, 2, 3], cum_weights=[10, 30, 55], k=2))
 
-
+# 从1-1000的范围内随机收取100个数
 print(random.sample(range(1000), k=100))

@@ -19,6 +19,3 @@ print(a.T)
 print('\n')
 a.resize((2, 6))
 print(a)
-a = np.arange(17)
-
-print('hello')

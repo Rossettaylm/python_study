@@ -1,6 +1,3 @@
-"""
-os package
-"""
 import sys
 import glob
 import shutil
