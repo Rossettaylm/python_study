@@ -12,6 +12,10 @@ print(u)
 # 序列解包
 x, y, z = t
 print(x, y, z)
+t = list(t)
+print(t)
+x, y, z = t
+print(x, y, z)
 
 # (2) 元组不支持直接赋值, tuple is immutable
 # t[0] = 8888 is wrong

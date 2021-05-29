@@ -9,15 +9,15 @@ rw.fill_walk()
 plt.figure(figsize=(10, 6), dpi=128)
 
 point_numbers = list(range(rw.num_points))
-plt.scatter(rw.x_values, rw.y_values, c=point_numbers,
-            cmap=plt.cm.Blues, edgecolors='none', s=1)  # type: ignore
+plt.scatter(rw.x_values, rw.y_values, c=rw.y_values, cmap='Oranges',
+            edgecolors='none', s=1)  # type: ignore
 
 # 突出起点和终点
 plt.scatter(0, 0, c='green', edgecolors='none', s=100)
-plt.scatter(rw.x_values[-1], rw.y_values[-1], s=100, edgecolors='none', c='red')
+plt.scatter(rw.x_values[-1], rw.y_values[-1],
+            s=100, edgecolors='none', c='red')
 
 plt.axis('off')
 
 
 plt.show()
-

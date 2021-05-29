@@ -1,5 +1,6 @@
 from random import choice
 
+
 class RandWalk():
     """一个生成随机漫步数据的类"""
     """一个存储漫步次数的变量，两个列表分别存储每次的横纵坐标"""
@@ -24,14 +25,12 @@ class RandWalk():
 
             self.add_next_step(x_step, y_step)
 
-        
     def get_step(self):
         # 决定前进方向以及沿着这个方向前进的距离
         direction = choice([1, -1])
-        distance = choice(range(0,5))
+        distance = choice(range(0, 5))
         step = direction * distance
         return step
-
 
     def add_next_step(self, x_step, y_step):
         # 计算下一个点的x和y值
@@ -39,4 +38,3 @@ class RandWalk():
         next_y = self.y_values[-1] + y_step
         self.x_values.append(next_x)
         self.y_values.append(next_y)
-
