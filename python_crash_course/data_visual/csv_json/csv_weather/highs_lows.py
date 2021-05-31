@@ -2,7 +2,6 @@ import csv
 from matplotlib import pyplot as plt
 from datetime import datetime
 
-
 # 从文件中获取日期，最高气温, 最低气温
 filename = 'death_valley_2014.csv'
 with open(filename) as f:
@@ -28,18 +27,17 @@ with open(filename) as f:
             highs.append(high)
             lows.append(low)
 
-
 # 根据数据绘制图形
 fig = plt.figure(dpi=128, figsize=(10, 6))
 plt.plot(dates, highs, c='red')
 plt.plot(dates, lows, c='blue')
 
 # 填充最高温和最低温之间的区域，alpha表示透明度
-plt.fill_between(dates, highs, lows,
-                 facecolor='blue', alpha=0.1)
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # 设置图形的格式
-plt.title("Daily high and low temperatures - 2014\nDeath Valley, CA", fontsize=24)
+plt.title("Daily high and low temperatures - 2014\nDeath Valley, CA",
+          fontsize=24)
 plt.xlabel('', fontsize=16)
 plt.ylabel("Temperature (F)", fontsize=16)
 

@@ -3,6 +3,7 @@
 # 更复杂的输出格式
 # (1)用f'...{}'来格式化字符串
 import math
+
 year = 2016
 event = 'Referendum'
 print(f'\nResults of the {year} {event}')
@@ -19,7 +20,6 @@ for name, phone in table.items():
 animals = 'eels'
 print(f'\nMy hovercraft is full of {animals}.')
 print(f'My hovercraft is full of {animals!r}')
-
 
 # (2)str.format()方法来格式化字符串
 yes_votes = 42_572_654
@@ -43,7 +43,6 @@ print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '
 # 解包字典
 print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
 
-
 # (3)把值转换为字符串
 # 1.str() 适合人读取
 # 2.repr() 适合机器读取
@@ -52,19 +51,18 @@ print()
 print(str(s))
 print(repr(s))
 
-
 print()
 # 格式化的几种方法
 # 1.format
 for x in range(1, 11):
-    print('{0:2d} {1:3d} {2:4d}'.format(x, x**2, x**3))
+    print('{0:2d} {1:3d} {2:4d}'.format(x, x ** 2, x ** 3))
 
 print()
 # 2.manual
 # rjust(x)往左侧填充空格,向右对齐.同类方法还有ljust(),center().
 for x in range(1, 11):
-    print(repr(x).rjust(2), repr(x**2).rjust(3), end=' ')
-    print(repr(x**3).rjust(4))
+    print(repr(x).rjust(2), repr(x ** 2).rjust(3), end=' ')
+    print(repr(x ** 3).rjust(4))
 
 # 补充zfill(), 在数字字符串左边填0,并能识别正负号
 print('\n', '12'.zfill(5))
