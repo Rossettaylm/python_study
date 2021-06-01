@@ -29,12 +29,10 @@ print('\n' + prefix + 'thon')
 # -6  -5  -4  -3  -2  -1
 word = 'Python'
 print('\n' + word[0], word[-1])
-print(word[0:2])  # included : excluded
+print(word[0:2]) # included : excluded
 print(word[2:5])
-print(word[:2] + word[2:])  # word = word[:i] + word[i:]
+print(word[:2] + word[2:]) # word = word[:i] + word[i:]
 print('J' + word[1:])
-
-
 """
 File: str.py
 Author: Rossetta

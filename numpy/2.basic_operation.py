@@ -15,10 +15,8 @@ print('b ** 2 = ', b ** 2)
 print('10 * sin(a) = ', 10 * np.sin(a))
 
 #  (2) 矩阵乘积用@或者dot函数或方法执行
-A = np.array([[1, 1],
-              [0, 1]])
-B = np.array([[2, 0],
-              [3, 4]])
+A = np.array([[1, 1], [0, 1]])
+B = np.array([[2, 0], [3, 4]])
 print('\n')
 print('elementwise product = ', A * B)
 print('matrix product = ', A @ B)
@@ -44,7 +42,7 @@ b = np.linspace(0, pi, 3)
 c = a + b
 print(c)
 print(c.dtype)
-d = np.exp(c * 1j)  # 以e为底的指数运算
+d = np.exp(c * 1j) # 以e为底的指数运算
 print(d)
 print(d.dtype)
 
@@ -58,6 +56,6 @@ b = np.arange(12).reshape(3, 4)
 print('\nrange(12).reshape(2, 3) = ', b)
 # sum of each column, first axis
 print('\nsum of each column = ', b.sum(axis=0))
-print('\nmin of each row', b.min(axis=1))  # min of each row, second axis
-print('\ncumulative sum of each row = ', b.cumsum(
-    axis=1))  # cumulative sum along each row
+print('\nmin of each row', b.min(axis=1)) # min of each row, second axis
+print('\ncumulative sum of each row = ',
+      b.cumsum(axis=1)) # cumulative sum along each row

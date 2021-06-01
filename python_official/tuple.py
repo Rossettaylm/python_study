@@ -22,6 +22,6 @@ print(x, y, z)
 
 # (3) 构造0个或1个元素的元组, 后接逗号表示是单元素的元组
 empty = ()
-singleton = ('hello',)
+singleton = ('hello', )
 print(len(empty), len(singleton))
 print(empty, singleton)
