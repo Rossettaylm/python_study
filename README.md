@@ -1,4 +1,4 @@
-# my_python_worddir
+# my_python_work_directory
 
 ---
 
