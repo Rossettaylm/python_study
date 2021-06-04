@@ -11,7 +11,6 @@ print('crabgrass' in basket)
 for i in sorted(basket):
     print(i)
 
-
 a = set('abracadabra')
 b = set('alacazam')
 # a ^ b : letters in a or b but not both

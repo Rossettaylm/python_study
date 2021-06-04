@@ -7,21 +7,20 @@ print(cubes)
 letters = ['a', 'b', 'c', 'd']
 print(len(letters))
 
-letters[1:3] = ['B', 'C'] # replace
+letters[1:3] = ['B', 'C']  # replace
 print(letters)
 
-letters[1:3] = [] # delete
+letters[1:3] = []  # delete
 print(letters)
 
-letters[:] = [] # clear
+letters[:] = []  # clear
 print(letters)
 
 # (3) 关键字参数 end 可以取消输出后面的换行, 或用另一个字符串结尾
 a, b = 0, 1
 while a < 1000:
     if b < 1000:
-        print(a, end=',') # 取消换行改用逗号
+        print(a, end=',')  # 取消换行改用逗号
     else:
         print(a)
-    a, b = b, a+b
-
+    a, b = b, a + b
