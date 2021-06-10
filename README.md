@@ -11,3 +11,11 @@
 ---
 
 - **the base of numpy**
+
+---
+
+- jupyter notebook
+
+---
+
+- data_structure

@@ -11,7 +11,7 @@ class PersonValueError(ValueError):
     pass
 
 
-class Person():
+class Person:
     """docstring for Person."""
     _num = 0
 
@@ -20,7 +20,7 @@ class Person():
             raise PersonValueError(name, sex)
         try:
             birth = datetime.date(*birthday)
-        except:
+        except ValueError:
             raise PersonValueError("Wrong date:", birthday)
         self._name = name
         self._sex = sex
@@ -41,7 +41,7 @@ class Person():
         return self._birthday
 
     def age(self):
-        return (datetime.date.today().year - self._birthday.year)
+        return datetime.date.today().year - self._birthday.year
 
     def set_name(self, name):
         if not isinstance(name, str):
@@ -89,7 +89,7 @@ print("People created:", Person.num(), "\n")
 
 class Student(Person):
     """docstring for Student."""
-    _id_num = 0  # 定义一个数据变量控制学号的唯一性，不属于任何Student实例对象
+    _id_num = 0 # 定义一个数据变量控制学号的唯一性，不属于任何Student实例对象
 
     @classmethod
     def _id_gen(cls):
@@ -100,7 +100,7 @@ class Student(Person):
         """
         cls._id_num += 1
         year = datetime.date.today().year
-        return "1{:04}{:05}".format(year, cls._id_num)  #
+        return "1{:04}{:05}".format(year, cls._id_num) #
 
     def __init__(self, name, sex, birthday, department):
         super().__init__(self, name, sex, birthday, Student._id_gen())
@@ -162,9 +162,9 @@ class Staff(Person):
         else:
             self._entry_date = datetime.date.today()
 
-        self._salary = 1720  # 默认为最低工资
-        self._department = "未定"  # 需要另行设定
-        self._position = "未定"  # 需要另行设定
+        self._salary = 1720 # 默认为最低工资
+        self._department = "未定" # 需要另行设定
+        self._position = "未定" # 需要另行设定
 
     def set_salary(self, amount):
         if not type(amount) is int:
