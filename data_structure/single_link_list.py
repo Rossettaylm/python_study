@@ -1,3 +1,4 @@
+#!/home/rossetta/miniconda3/envs/dl/bin/python
 # 在一个非空的线性表里，存在着唯一一个首元素和唯一的一个尾元素。除首元素之外，表中的每个元素e
 # 都仅有一个前驱元素；除尾元素之外，表中的每个元素都仅有一个后继元素。
 
@@ -14,26 +15,19 @@ class LNode:
         self.elem = elem
         self.next = next_
 
-    def length(self, head):
-        """求表的长度"""
-        p, n = head, 0
-        while p is not None:
-            n += 1
-            p = p.next
-        return n
 
+if __name__ == "__main__":
+    llist1 = LNode(1)
+    p = llist1
+    for i in range(2, 11):
+        p.next = LNode(i)
+        p = p.next
 
-llist1 = LNode(1)
-p = llist1
-for i in range(2, 11):
-    p.next = LNode(i)
-    p = p.next
-
-p = llist1
-# while p:
-while p is not None:
-    print(p.elem)
-    p = p.next
+    p = llist1
+    # while p:
+    while p is not None:
+        print(p.elem)
+        p = p.next
 
 
 class LList:
@@ -43,7 +37,7 @@ class LList:
     def is_empty(self):
         return self._head is None
 
-    def prepend(self, elem):  # 在head之前加
+    def prepend(self, elem):
         self._head = LNode(elem, self._head)
 
     def pop(self):
@@ -119,15 +113,17 @@ class LList:
             p = p.next
 
 
-mlist1 = LList()
-for i in range(10):
-    mlist1.append(i)
-for i in range(11, 20):
-    mlist1.append(i)
-mlist1.printall()
+if __name__ == "__main__":
+    mlist1 = LList()
+    for i in range(10):
+        mlist1.append(i)
+    #  mlist1.printall()
 
-mlist1.for_each(print)
+    #  mlist1.for_each(print)
 
-# 使用迭代器遍历链表
-for x in mlist1.elements():
-    print(x)
+    #  # 使用迭代器遍历链表
+    #  for x in mlist1.elements():
+    #  print(x)
+    for value in mlist1.filter(lambda y: y % 2 == 0):
+        print(value)
+
