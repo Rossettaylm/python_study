@@ -13,6 +13,7 @@ class LinkedListUnderflow(ValueError):
 
 class LNode:
     """定义一个节点类"""
+
     def __init__(self, elem, next_=None) -> None:
         self.elem = elem
         self.next = next_
@@ -34,6 +35,7 @@ class LNode:
 
 class LList:
     """定义一个单链表类"""
+
     def __init__(self) -> None:
         self._head = None
 
@@ -60,10 +62,10 @@ class LList:
         p.next = LNode(elem)
 
     def pop_last(self):
-        if self._head == None: # 空表
+        if self._head == None:  # 空表
             raise LinkedListUnderflow("in pop_last")
         p = self._head
-        if p.next == None: # 表中只有一个元素
+        if p.next == None:  # 表中只有一个元素
             e = p.elem
             self._head = None
             return e
@@ -73,7 +75,7 @@ class LList:
         p.next = None
         return e
 
-    def find(self, pred):
+    def find(self, pred):  # 穿入的pred为函数，可用lambda表示
         p = self._head
         while p is not None:
             if pred(p.elem):
@@ -94,7 +96,7 @@ class LList:
         """
         p = self._head
         while p is not None:
-            proc(p.elem) # proc应该是可以作用于表元素的操作函数，它将被作用于每个表元素。
+            proc(p.elem)  # proc应该是可以作用于表元素的操作函数，它将被作用于每个表元素。
             p = p.next
 
     def elements(self):
@@ -115,6 +117,29 @@ class LList:
                 yield p.elem
             p = p.next
 
+    def rev(self):
+        """将链表的首端结点取下加入一个新链表，最后通过head指向它
+        """
+        p = None
+        while self._head is not None:  # 当链表非空时
+            q = self._head     # 取首结点赋给q
+            self._head = q.next  # head指向第二结点
+            q.next = p  # 新取下来的结点加在新链表的前面, 最末的结点next为None
+            p = q       # 将p设为前端待插入的结点
+        self._head = p  # 最终令head指向p，即首结点
+
+
+def list_sort(lst):
+    """插入排序
+    """
+    for i in range(1, len(lst)):
+        x = lst[i]
+        j = i
+        while j > 0 and lst[j-1] > x:
+            lst[j] = lst[j - 1]
+            j -= 1
+        lst[j] = x
+
 
 #  if __name__ == "__main__":
 #  mlist1 = LList()
@@ -130,9 +155,9 @@ class LList:
 #  for value in mlist1.filter(lambda y: y % 2 == 0):
 #  print(value)
 
-
 class LList1(LList):
     """链表头不仅有head也有rear，指向表尾"""
+
     def __init__(self) -> None:
         super().__init__()
         self._rear = None
@@ -186,6 +211,7 @@ class LList1(LList):
 
 class LCList:
     """循环单链表类"""
+
     def __init__(self) -> None:
         self._rear = None
 
@@ -195,10 +221,10 @@ class LCList:
     def prepend(self, elem):
         p = LNode(elem)
         if self._rear is None:
-            p.next = p # 建立一个节点的循环
+            p.next = p  # 建立一个节点的循环
             self._rear = p
         else:
-            p.next = self._rear.next # 将p指向头结点
+            p.next = self._rear.next  # 将p指向头结点
             self._rear.next = p
 
     def append(self, elem):
@@ -208,11 +234,11 @@ class LCList:
     def pop(self):
         if self._rear is None:
             raise LinkedListUnderflow("in pop of CLList")
-        p = self._rear.next # p指向第一个节点
-        if self._rear is p: # 只有一个节点时
+        p = self._rear.next  # p指向第一个节点
+        if self._rear is p:  # 只有一个节点时
             self._rear = None
         else:
-            self._rear.next = p.next # 删除第一个节点
+            self._rear.next = p.next  # 删除第一个节点
         return p.elem
 
     def pop_last(self):
@@ -243,13 +269,13 @@ class LCList:
             p = p.next
 
 
-if __name__ == "__main__":
-    circlist = LCList()
-    for value in range(10):
-        circlist.append(randint(1, 10))
+# if __name__ == "__main__":
+    #circlist = LCList()
+    # for value in range(10):
+        #circlist.append(randint(1, 10))
 
-    circlist.printall()
-    print('The first elements:' + str(circlist.pop()))
-    circlist.printall()
-    print('The last elements:' + str(circlist.pop_last()))
-    circlist.printall()
+    # circlist.printall()
+    #print('The first elements:' + str(circlist.pop()))
+    # circlist.printall()
+    #print('The last elements:' + str(circlist.pop_last()))
+    # circlist.printall()
