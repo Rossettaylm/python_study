@@ -1,3 +1,4 @@
+#!/home/rossetta/miniconda3/envs/dl/bin/python
 # 双向链表支持两端的高效操作，但每个结点都需增加一个链接域
 # 结点: prev | elem | next
 # 头指针：head | rear
@@ -81,4 +82,7 @@ for value in range(10):
 list1.printall()
 print(list1.length())
 list1.reverse()
+list1.printall()
+
+list1.append(randint(1, 10))
 list1.printall()
