@@ -55,7 +55,7 @@ while p is not None and i > 0:
 	p = p.next
 ```
 
- p 为扫描指针，每次遍历前需要检查其是否为 None
+p 为扫描指针，每次遍历前需要检查其是否为 None
 
 ```python
 p = head
@@ -63,7 +63,7 @@ while p is not None and not pred(p.elem):
     p = p.next
 ```
 
- **遍历**
+**遍历**
 
 ```python
 p = head
@@ -76,16 +76,10 @@ while p is not None:
 
   ![normal](/home/rossetta/python_works/data_structure/link_list/pictures/normal_single_linked_list.png)
 
-- 带rear的单链表
+- 带 rear 的单链表
 
   ![rear](/home/rossetta/python_works/data_structure/link_list/pictures/with_rear_single_linked_list.png)
 
 - 循环单链表
 
   ![circulate](/home/rossetta/python_works/data_structure/link_list/pictures/circulate_single_linked_list.png)
-
-  
-
-  
-
-  
