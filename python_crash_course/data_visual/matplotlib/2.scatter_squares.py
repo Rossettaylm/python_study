@@ -10,13 +10,12 @@ y_values = [value ** 2 for value in x_values]
 # plt.scatter(x_values, y_values, edgecolors='none', c=(0.4, 0.5, 0.5), s=20)
 
 # 3.将c设置成y值列表，并使用参数cmap告诉pyplot使用蓝色映射
-plt.scatter(
-    x_values,
-    y_values,
-    c=y_values,
-    cmap=plt.cm.Blues, # type: ignore
-    edgecolors='none',
-    s=40)
+plt.scatter(x_values,
+            y_values,
+            c=y_values,
+            cmap='Blues',
+            edgecolors='none',
+            s=40)
 
 # 设置散点图标题并给坐标轴加上标签
 plt.title("Squares Numbers", fontsize=24)

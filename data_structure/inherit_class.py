@@ -89,7 +89,7 @@ print("People created:", Person.num(), "\n")
 
 class Student(Person):
     """docstring for Student."""
-    _id_num = 0 # 定义一个数据变量控制学号的唯一性，不属于任何Student实例对象
+    _id_num = 0  # 定义一个数据变量控制学号的唯一性，不属于任何Student实例对象
 
     @classmethod
     def _id_gen(cls):
@@ -162,9 +162,9 @@ class Staff(Person):
         else:
             self._entry_date = datetime.date.today()
 
-        self._salary = 1720 # 默认为最低工资
-        self._department = "未定" # 需要另行设定
-        self._position = "未定" # 需要另行设定
+        self._salary = 1720  # 默认为最低工资
+        self._department = "未定"  # 需要另行设定
+        self._position = "未定"  # 需要另行设定
 
     def set_salary(self, amount):
         if not type(amount) is int:
