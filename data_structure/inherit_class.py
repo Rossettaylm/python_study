@@ -198,3 +198,5 @@ p2.set_salary(18400)
 
 print(p1.details())
 print(p2.details())
+
+

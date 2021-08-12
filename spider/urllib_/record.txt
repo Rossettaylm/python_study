@@ -1,0 +1,19 @@
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "name": "Rossetta"
+  }, 
+  "headers": {
+    "Accept-Encoding": "identity", 
+    "Content-Length": "13", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Python-urllib/3.8", 
+    "X-Amzn-Trace-Id": "Root=1-610e4f6d-2d19176a2c6e578158e961a2"
+  }, 
+  "json": null, 
+  "origin": "27.158.90.215", 
+  "url": "http://httpbin.org/post"
+}
