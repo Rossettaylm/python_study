@@ -30,4 +30,4 @@ plt.xlabel('Time')
 plt.ylabel('Amplitude')
 plt.axis([0, 2 * pi, -2, 2])
 
-plt.show()
+plt.savefig('modulation.png')
