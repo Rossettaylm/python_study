@@ -3,6 +3,7 @@ create array
 """
 
 from matplotlib import pyplot as plt
+
 import numpy as np
 from numpy import pi
 
@@ -15,6 +16,7 @@ print(a.itemsize)
 print(a.data)
 print(a.size)
 print(type(a))
+
 
 # 数组创建
 # (1) 用array从常规python列表或元组中创建
@@ -40,7 +42,7 @@ print(e)
 #  (3) 创建包含初始占位符的数组, 默认dtype为float64
 a = np.zeros((3, 4))
 b = np.ones((2, 3, 4), dtype=np.int16)
-c = np.empty((2, 3)) #empty内容随机，取决于内存状态
+c = np.empty((2, 3))  # empty内容随机，取决于内存状态
 print('\n')
 print(a)
 print(b)
