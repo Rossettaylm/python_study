@@ -11,6 +11,7 @@ from ship import Ship
 
 def run_game():
     pygame.init()
+    # 初始化设置对象和屏幕大小
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width,
                                       ai_settings.screen_height))
@@ -36,7 +37,7 @@ def run_game():
             ship.update()
             gf.update_bullets(ai_settings, screen, ship,
                     stats, sb, aliens, bullets)
-            gf.update_aliens(ai_settings, stats, screen, sb, 
+            gf.update_aliens(ai_settings, stats, screen, sb,
                     ship, aliens, bullets)
 
         gf.update_screen(ai_settings, screen, stats,

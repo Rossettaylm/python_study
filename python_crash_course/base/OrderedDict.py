@@ -1,5 +1,6 @@
 # python标准库模块的导入
 from collections import OrderedDict
+
 # 创建有序字典
 favorite_languages = OrderedDict()
 favorite_languages['jen'] = 'python'
